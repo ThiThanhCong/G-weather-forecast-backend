@@ -39,17 +39,17 @@ Make sure you have the following installed on your machine:
    php artisan key:generate
    ```
    
-9. **Configure your database:**
+8. **Configure your database:**
     
    Edit the `.env` file to set up your database connection.
    
-11. **Run migrations:**
+9. **Run migrations:**
     
    ```bash
    php artisan migrate 
    ```
 
-11. **Start the development server:**
+10. **Start the development server:**
     
    ```bash
    php artisan serve
