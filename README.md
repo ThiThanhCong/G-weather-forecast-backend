@@ -15,29 +15,42 @@ Make sure you have the following installed on your machine:
 
 ### Installation
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/ThiThanhCong/G-weather-forecast-backend.git
    cd g-weather-forecast-backend
     ```
-2. **Install dependencies**
+   
+3. **Install dependencies**
+
    ```bash
    composer install
    ```
-3. **Config .env file:**
+   
+5. **copy .env file:**
+   
    ```bash
    cp .env.example .env
    ```
-4. **Generate application key:**
+   
+7. **Generate application key:**
+   
    ```bash
    php artisan key:generate
    ```
-5. **Configure your database:**
+   
+9. **Configure your database:**
+    
    Edit the `.env` file to set up your database connection.
-6. **Run migrations:**
+   
+11. **Run migrations:**
+    
    ```bash
    php artisan migrate 
    ```
-7. **Start the development server:**
+
+11. **Start the development server:**
+    
    ```bash
    php artisan serve
    ```
