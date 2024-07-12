@@ -91,4 +91,11 @@ class UserController extends Controller
         }
     }
 
+    public function test(Request $request)
+    {
+        return response()->json([
+            'status' => 404,
+            'message' => 'User not found'
+        ], 404);
+    }
 }

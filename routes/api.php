@@ -19,3 +19,6 @@ Route::post("/save", [WeatherReportController::class,'store']);
 Route::get("/reports",[WeatherReportController::class,'getReportDates']);
 
 Route::get("/getByDate/{date}",[WeatherReportController::class,'getWeatherDataByDate']);
+
+
+Route::get("/test",[UserController::class,'test']);
