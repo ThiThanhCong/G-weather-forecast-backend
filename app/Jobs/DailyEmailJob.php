@@ -14,7 +14,7 @@ use App\Mail\OTPMail;
 class DailyEmailJob implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-
+    
     public function __construct()
     {
         //
@@ -27,5 +27,6 @@ class DailyEmailJob implements ShouldQueue
         foreach ($users as $user) {
             Mail::to($user->email)->send(new OTPMail($user));
         }
+        return;
     }
 }

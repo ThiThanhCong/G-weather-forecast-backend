@@ -20,5 +20,7 @@ Route::get("/reports",[WeatherReportController::class,'getReportDates']);
 
 Route::get("/getByDate/{date}",[WeatherReportController::class,'getWeatherDataByDate']);
 
+Route::get("/daily",[UserController::class,'dailyEmail']);
+
 
 Route::get("/test",[UserController::class,'test']);

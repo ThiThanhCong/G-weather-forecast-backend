@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Mail\OTPMail;
+use App\Mail\dailyEmail;
 use Illuminate\Support\Facades\Mail;
 use App\Models\User;
 use App\Models\OTP;
@@ -91,6 +92,16 @@ class UserController extends Controller
         }
     }
 
+    public function dailyEmail(){
+        $users = User::all();
+
+        foreach ($users as $user) {
+            $city = 'Hồ Chí Minh';
+            Mail::to($user->email)->send(new DailyEmail($city));
+        }
+        return;
+    }
+    
     public function test(Request $request)
     {
         return response()->json([
